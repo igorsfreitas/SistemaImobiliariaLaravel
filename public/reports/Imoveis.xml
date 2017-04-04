@@ -1,0 +1,2 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<jdbcDataAdapter class="net.sf.jasperreports.data.jdbc.JdbcDataAdapterImpl"><name>Imoveis</name><driver>com.mysql.jdbc.Driver</driver><username>root</username><password>root</password><savePassword>true</savePassword><url>jdbc:mysql://localhost:8889/cadastroImobiliario</url><database></database><serverAddress></serverAddress><classpath>/Users/igorfreitas/Documents/Relatorios/mysql-connector-java-5.1.41-bin.jar</classpath></jdbcDataAdapter>
