@@ -237,6 +237,7 @@
 <div class="form-group">
     <div class="col-md-offset-4 col-md-4">
         {!! Form::submit(isset($submitButtonText) ? $submitButtonText : 'Adicionar', ['class' => 'btn btn-primary', 'id' => 'btnAtualizarImovel']) !!}
+        <input id="testeBtn" onCLick="submitTeste()" value="teste" class="btn btn-primary">
     </div>
 </div>
 
@@ -266,4 +267,116 @@
         });
 
     });
+    
+    function submitTeste(){
+        if($("#nomeEdificio").val() == ""){
+            $("#nomeEdificio").val("-");
+        } 
+        
+        if($("#numeroAptCasa").val() == ""){
+            $("#numeroAptCasa").val("-");
+        }
+        
+        if($("#tamanhoTerreno").val() == ""){
+            $("#tamanhoTerreno").val("-");
+        }
+        
+        if($("#numeroAndares").val() == ""){
+            $("#numeroAndares").val("-");
+        }
+        
+        if($("#qtAptAndar").val() == ""){
+            $("#qtAptAndar").val("-");
+        }
+        
+        if($("#endereco").val() == ""){
+            $("#endereco").val("-");
+        }
+        
+        if($("#bairro").val() == ""){
+            $("#bairro").val("-");
+        }
+        
+        if($("#cidade").val() == ""){
+            $("#cidade").val("-");
+        }
+        
+        if($("#cep").val() == ""){
+            $("#cep").val("-");
+        }
+        
+        if($("#qtdSuites").val() == ""){
+            $("#qtdSuites").val("-");
+        }
+        
+        if($("#qtdBanheiros").val() == ""){
+            $("#qtdBanheiros").val("-");
+        }
+        
+        if($("#areaUtil").val() == ""){
+            $("#areaUtil").val("-");
+        }
+        
+        if($("#itensLazer").val() == ""){
+            $("#itensLazer").val("-");
+        }
+        
+        if($("#tempoConstrucao").val() == ""){
+            $("#tempoConstrucao").val("-");
+        }
+        
+        if($("#valorCondominio").val() == ""){
+            $("#valorCondominio").val("-");
+        }
+        
+        if($("#valorIptu").val() == ""){
+            $("#valorIptu").val("-");
+        }
+        
+        if($("#qtdGaragens").val() == ""){
+            $("#qtdGaragens").val("-");
+        }
+        
+        if($("#nomeProprietario").val() == ""){
+            $("#nomeProprietario").val("-");
+        }
+        
+        if($("#emailProprietario").val() == ""){
+            $("#emailProprietario").val("-");
+        }
+        
+        if($("#foneProprietario").val() == ""){
+            $("#foneProprietario").val("-");
+        }
+        
+        if($("#valorVenda").val() == ""){
+            $("#valorVenda").val("-");
+        }
+        
+        if($("#valorLocacao").val() == ""){
+            $("#valorLocacao").val("-");
+        }
+        
+        if($("#nomeConstrutora").val() == ""){
+            $("#nomeConstrutora").val("-");
+        }
+        
+        if($("#percentualComissao").val() == ""){
+            $("#percentualComissao").val("-");
+        }
+        
+        if($("#quemIndicou").val() == ""){
+            $("#quemIndicou").val("-");
+        }
+        
+        if($("#foneQuemIndicou").val() == ""){
+            $("#foneQuemIndicou").val("-");
+        }
+        
+        if($("#outrasInformacoes").val() == ""){
+            $("#outrasInformacoes").val("-");
+        }
+            $("#formCadastroImoveis").submit();
+        
+    }
 </script>

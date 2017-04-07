@@ -40,6 +40,8 @@
                                     <tr style="display:none;"><th> Disponível ? </th><td id="disponivel"> {{ $cadastroimovei->disponivel }} </td></tr>
 
                                     <tr><th> Tipo do Imóvel </th><td id="tipoImovel"> {{ $cadastroimovei->tipoImovel }} </td></tr>
+
+                                    <tr><th> Locação/Venda </th><td id="locacaoVenda"> {{ $cadastroimovei->locacaoVenda }} </td></tr>
                                     
                                     <tr><th> Nome do Edifício </th><td> {{ $cadastroimovei->nomeEdificio }} </td></tr>
                                     
@@ -172,6 +174,12 @@
         }else if(document.getElementById("disponivel").innerHTML == 1){
             $("#imovelIndisponivel").show();
             $("#imovelDisponivel").hide();
+        }
+
+        if(document.getElementById("locacaoVenda").innerHTML == 0){
+            document.getElementById("locacaoVenda").innerHTML = "Locação";
+        }else if(document.getElementById("locacaoVenda").innerHTML == 1){
+            document.getElementById("locacaoVenda").innerHTML = "Venda";
         }
     </script>
 @endsection
