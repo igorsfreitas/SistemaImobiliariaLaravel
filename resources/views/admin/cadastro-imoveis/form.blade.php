@@ -237,7 +237,7 @@
 <div class="form-group">
     <div class="col-md-offset-4 col-md-4">
         {!! Form::submit(isset($submitButtonText) ? $submitButtonText : 'Adicionar', ['class' => 'btn btn-primary', 'id' => 'btnAtualizarImovel']) !!}
-        <input id="testeBtn" onCLick="submitTeste()" value="teste" class="btn btn-primary">
+        <input id="testeBtn" onCLick="submitTeste()" value="Enviar" class="btn btn-primary" />
     </div>
 </div>
 
@@ -267,6 +267,8 @@
         });
 
     });
+
+    $('#btnAtualizarImovel').hide();
     
     function submitTeste(){
         if($("#nomeEdificio").val() == ""){
@@ -282,11 +284,11 @@
         }
         
         if($("#numeroAndares").val() == ""){
-            $("#numeroAndares").val("-");
+            $("#numeroAndares").val("0");
         }
         
         if($("#qtAptAndar").val() == ""){
-            $("#qtAptAndar").val("-");
+            $("#qtAptAndar").val("0");
         }
         
         if($("#endereco").val() == ""){
@@ -304,13 +306,16 @@
         if($("#cep").val() == ""){
             $("#cep").val("-");
         }
+        if($("#qtdQuartos").val() == ""){
+            $("#qtdQuartos").val("0");
+        }
         
         if($("#qtdSuites").val() == ""){
-            $("#qtdSuites").val("-");
+            $("#qtdSuites").val("0");
         }
         
         if($("#qtdBanheiros").val() == ""){
-            $("#qtdBanheiros").val("-");
+            $("#qtdBanheiros").val("0");
         }
         
         if($("#areaUtil").val() == ""){
@@ -334,7 +339,7 @@
         }
         
         if($("#qtdGaragens").val() == ""){
-            $("#qtdGaragens").val("-");
+            $("#qtdGaragens").val("0");
         }
         
         if($("#nomeProprietario").val() == ""){
@@ -376,7 +381,13 @@
         if($("#outrasInformacoes").val() == ""){
             $("#outrasInformacoes").val("-");
         }
-            $("#formCadastroImoveis").submit();
+
+        if($("#dataCaptacao").val() == ""){
+            $('#dataCaptacao').val('2000-01-01');
+        }
+
+        //$("#formCadastroImoveis").submit();
+        $('#btnAtualizarImovel').click();
         
     }
 </script>
