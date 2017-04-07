@@ -21,3 +21,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/relatorioImoveis', 'ReportController@index');
+
+Route::resource('admin/cadastro-imoveis', 'Admin\\CadastroImoveisController');

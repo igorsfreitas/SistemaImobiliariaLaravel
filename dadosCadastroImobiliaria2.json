@@ -1,0 +1,165 @@
+{
+   "fields": [
+        {
+            "name": "disponivel",
+            "type": "select",
+            "options": ["Disponível", "Indisponível"]
+        },
+        {
+            "name": "tipoImovel",
+            "type": "select",
+            "options": ["Casa", "Apartamento"]
+        },
+        {
+            "name": "locacaoVenda",
+            "type": "select",
+            "options": ["Locação", "Venda"]
+        },
+        {
+            "name": "nomeEdificio",
+            "type": "string"
+        },
+        {
+            "name": "numeroAptCasa",
+            "type": "string"
+        },
+        {
+            "name": "tamanhoTerreno",
+            "type": "string"
+        },
+        {
+            "name": "terrenoProprio",
+            "type": "select",
+            "options": ["Sim","Não"]
+        },
+        {
+            "name": "marinha",
+            "type": "select",
+            "options": ["Sim","Não"]
+        },
+        {
+            "name": "numeroAndares",
+            "type": "number"
+        },
+        {
+            "name": "qtAptAndar",
+            "type": "number"
+        },
+        {
+            "name": "endereco",
+            "type": "string"
+        },
+        {
+            "name": "bairro",
+            "type": "string"
+        },
+        {
+            "name": "cidade",
+            "type": "string"
+        },
+        {
+            "name": "cep",
+            "type": "string"
+        },
+        {
+            "name": "qtdQuartos",
+            "type": "number"
+        },
+        {
+            "name": "qtdSuites",
+            "type": "number"
+        },
+        {
+            "name": "qtdBanheiros",
+            "type": "string"
+        },
+        {
+            "name": "varanda",
+            "type": "select",
+            "options": ["Sim","Não"]
+        },
+        {
+            "name": "terraco",
+            "type": "select",
+            "options": ["Sim","Não"]
+        },
+        {
+            "name": "areaUtil",
+            "type": "string"
+        },
+        {
+            "name": "itensLazer",
+            "type": "string"
+        },
+        {
+            "name": "tempoConstrucao",
+            "type": "string"
+        },
+        {
+            "name": "valorCondominio",
+            "type": "string"
+        },
+        {
+            "name": "valorIptu",
+            "type": "string"
+        },
+        {
+            "name": "posicaoSol",
+            "type": "select",
+            "options": ["Norte","Sul","Leste","Oeste"]
+        },
+        {
+            "name": "qtdGaragens",
+            "type": "number"
+        },
+        {
+            "name": "tipoGaragens",
+            "type": "select",
+            "options": ["Coberta","Descoberta","Presa","Solta", "1 Presa e 1 Livre", "1 Presa e 2 Livres", "1 Coberta e 1 Descoberta", "2 Cobertas e 1 Descoberta"]
+        },
+        {
+            "name": "nomeProprietario",
+            "type": "string"
+        },
+        {
+            "name": "emailProprietario",
+            "type": "string"
+        },
+        {
+            "name": "foneProprietario",
+            "type": "string"
+        },
+        {
+            "name": "valorVenda",
+            "type": "string"
+        },
+        {
+            "name": "valorLocacao",
+            "type": "string"
+        },
+        {
+            "name": "nomeConstrutora",
+            "type": "string"
+        },
+        {
+            "name": "percentualComissao",
+            "type": "string"
+        },
+        {
+            "name": "quemIndicou",
+            "type": "string"
+        },
+        {
+            "name": "foneQuemIndicou",
+            "type": "string"
+        },
+        {
+            "name": "outrasInformacoes",
+            "type": "string"
+        },
+        {
+            "name": "dataCaptacao",
+            "type": "date"
+        }
+   ]
+}

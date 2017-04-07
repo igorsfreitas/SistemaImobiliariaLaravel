@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title>Versionamento Tabelas</title>
+</head>
+<body>
+  <table id="sortable">
+    <tbody>
+        <tr>
+            <td class="content">A</td>
+        </tr>
+        <tr>
+            <td class="content">B</td>
+        </tr>
+        <tr>
+            <td class="content">A</td>
+        </tr>
+    </tbody>
+</table>
+</body>
+</html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+
+$(document).ready(function() {
+   var tableRows = $("#sortable tbody tr");
+
+   tableRows.each(function(n){
+      var id = this.id;
+      var row = $(this).html();
+
+      tableRows.each(function(n){
+         var $this;
+         if(this.id != id){
+            $this = $(this);
+            alert($this.html());
+            alert(row);
+            if ($this.html() == row){
+               $this.css('backgroundColor', 'blue');
+               alert(9);
+            }
+          }
+       });
+   });
+});
+
+</script>

@@ -37,7 +37,7 @@
     };
 
     function gerenciarImoveis(){
-        location.href = "{{ url('/imoveis') }}";
+        location.href = "{{ url('/admin/cadastro-imoveis') }}";
     };
 </script>
 @endsection

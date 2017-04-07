@@ -1,19 +1,20 @@
-<div class="form-group {{ $errors->has('tipoImovel') ? 'has-error' : ''}}">
+<div class="form-group {{ $errors->has('disponivel') ? 'has-error' : ''}}">
+    {!! Form::label('disponivel', 'Disponível ?', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+        {!! Form::select('disponivel', ['Disponível', 'Indisponível'], null, ['class' => 'form-control']) !!}
+        {!! $errors->first('disponivel', '<p class="help-block">:message</p>') !!}
+    </div>
+</div><div class="form-group {{ $errors->has('tipoImovel') ? 'has-error' : ''}}">
     {!! Form::label('tipoImovel', 'Tipo do Imóvel', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
         {!! Form::select('tipoImovel', ['Casa', 'Apartamento'], null, ['class' => 'form-control']) !!}
         {!! $errors->first('tipoImovel', '<p class="help-block">:message</p>') !!}
     </div>
-</div>
-
-<div class="form-group">
-    <div class="col-md-offset-4 col-md-6">
-        <label class="radio-inline">
-            <input type="radio" name="locacaoVenda" id="radioLocacao" value="0"> Locação
-        </label>
-        <label class="radio-inline">
-            <input type="radio" name="locacaoVenda" id="radioVenda" value="1"> Venda
-        </label>
+</div><div class="form-group {{ $errors->has('locacaoVenda') ? 'has-error' : ''}}">
+    {!! Form::label('locacaoVenda', 'Locação ou Venda', ['class' => 'col-md-4 control-label']) !!}
+    <div class="col-md-6">
+        {!! Form::select('locacaoVenda', ['Locação', 'Venda'], null, ['class' => 'form-control']) !!}
+        {!! $errors->first('locacaoVenda', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
 
@@ -130,7 +131,7 @@
         {!! $errors->first('itensLazer', '<p class="help-block">:message</p>') !!}
     </div>
 </div><div class="form-group {{ $errors->has('tempoConstrucao') ? 'has-error' : ''}}">
-    {!! Form::label('tempoConstrucao', 'Tempo de Construção', ['class' => 'col-md-4 control-label']) !!}
+    {!! Form::label('tempoConstrucao', 'Ano de Construção', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
         {!! Form::text('tempoConstrucao', null, ['class' => 'form-control']) !!}
         {!! $errors->first('tempoConstrucao', '<p class="help-block">:message</p>') !!}
@@ -235,7 +236,7 @@
 
 <div class="form-group">
     <div class="col-md-offset-4 col-md-4">
-        {!! Form::submit(isset($submitButtonText) ? $submitButtonText : 'Adicionar', ['class' => 'btn btn-primary']) !!}
+        {!! Form::submit(isset($submitButtonText) ? $submitButtonText : 'Adicionar', ['class' => 'btn btn-primary', 'id' => 'btnAtualizarImovel']) !!}
     </div>
 </div>
 
@@ -243,27 +244,26 @@
 <script type='text/javascript'>
 
     $(document).ready(function(){
+        $('select[name="locacaoVenda"]').change(function(){
+            if($(this).val() == '0'){
+                $("#valorVenda").parent().parent().fadeOut(1);
+                $("#valorVenda").val("-");
+                $("#percentualComissao").parent().parent().fadeOut(1);
+                $("#percentualComissao").val("-");
+                
 
-    $('input:radio[name="locacaoVenda"]').change(function(){
-        if($(this).val() == '0'){
-            $("#valorVenda").parent().parent().fadeOut(1);
-            $("#valorVenda").val("-");
-            $("#percentualComissao").parent().parent().fadeOut(1);
-            $("#percentualComissao").val("-");
-            
+                $("#valorLocacao").parent().parent().fadeIn(1);
+                $("#valorLocacao").val("");
+            }else if($(this).val() == '1'){
+                $("#valorLocacao").parent().parent().fadeOut(1);
+                $("#valorLocacao").val("-");
 
-            $("#valorLocacao").parent().parent().fadeIn(1);
-            $("#valorLocacao").val("");
-        }else if($(this).val() == '1'){
-            $("#valorLocacao").parent().parent().fadeOut(1);
-            $("#valorLocacao").val("-");
-
-            $("#valorVenda").parent().parent().fadeIn(1);
-            $("#valorVenda").val("");
-            $("#percentualComissao").parent().parent().fadeIn(1);
-            $("#percentualComissao").val("");
-        }
-    });
+                $("#valorVenda").parent().parent().fadeIn(1);
+                $("#valorVenda").val("");
+                $("#percentualComissao").parent().parent().fadeIn(1);
+                $("#percentualComissao").val("");
+            }
+        });
 
     });
 </script>

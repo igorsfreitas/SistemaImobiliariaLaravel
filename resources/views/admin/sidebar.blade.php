@@ -10,7 +10,7 @@
                     <a href="{{ url('/home') }}">
                         Início
                     </a>
-                    <a href="{{ url('/imoveis') }}">
+                    <a href="{{ url('/admin/cadastro-imoveis') }}">
                         Dashboard
                     </a>
                     <a href="{{ url('/relatorioImoveis') }}" target="_blank">
