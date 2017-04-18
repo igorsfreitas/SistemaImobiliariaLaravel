@@ -13,7 +13,7 @@
 </div><div class="form-group {{ $errors->has('locacaoVenda') ? 'has-error' : ''}}">
     {!! Form::label('locacaoVenda', 'Locação ou Venda', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
-        {!! Form::select('locacaoVenda', ['Locação', 'Venda'], null, ['class' => 'form-control']) !!}
+        {!! Form::select('locacaoVenda', ['Locação', 'Venda', 'Locação / Venda'], null, ['class' => 'form-control']) !!}
         {!! $errors->first('locacaoVenda', '<p class="help-block">:message</p>') !!}
     </div>
 </div>
@@ -258,6 +258,14 @@
             }else if($(this).val() == '1'){
                 $("#valorLocacao").parent().parent().fadeOut(1);
                 $("#valorLocacao").val("-");
+
+                $("#valorVenda").parent().parent().fadeIn(1);
+                $("#valorVenda").val("");
+                $("#percentualComissao").parent().parent().fadeIn(1);
+                $("#percentualComissao").val("");
+            }else if($(this).val() == '2'){
+                $("#valorLocacao").parent().parent().fadeIn(1);
+                $("#valorLocacao").val("");
 
                 $("#valorVenda").parent().parent().fadeIn(1);
                 $("#valorVenda").val("");
