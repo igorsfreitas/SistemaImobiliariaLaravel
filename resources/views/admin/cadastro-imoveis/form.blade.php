@@ -11,7 +11,7 @@
         {!! $errors->first('tipoImovel', '<p class="help-block">:message</p>') !!}
     </div>
 </div><div class="form-group {{ $errors->has('locacaoVenda') ? 'has-error' : ''}}">
-    {!! Form::label('locacaoVenda', 'Locação ou Venda', ['class' => 'col-md-4 control-label']) !!}
+    {!! Form::label('locacaoVenda', 'Locação / Venda', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
         {!! Form::select('locacaoVenda', ['Locação', 'Venda', 'Locação / Venda'], null, ['class' => 'form-control']) !!}
         {!! $errors->first('locacaoVenda', '<p class="help-block">:message</p>') !!}
@@ -25,7 +25,7 @@
         {!! $errors->first('nomeEdificio', '<p class="help-block">:message</p>') !!}
     </div>
 </div><div class="form-group {{ $errors->has('numeroAptCasa') ? 'has-error' : ''}}">
-    {!! Form::label('numeroAptCasa', 'Número do Apartamento / Casa', ['class' => 'col-md-4 control-label']) !!}
+    {!! Form::label('numeroAptCasa', 'Número do Apartamento / Casa / Sala Comercial', ['class' => 'col-md-4 control-label']) !!}
     <div class="col-md-6">
         {!! Form::text('numeroAptCasa', null, ['class' => 'form-control']) !!}
         {!! $errors->first('numeroAptCasa', '<p class="help-block">:message</p>') !!}

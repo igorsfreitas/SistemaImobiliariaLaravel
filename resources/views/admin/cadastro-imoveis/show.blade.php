@@ -41,7 +41,7 @@
 
                                     <tr><th> Tipo do Imóvel </th><td id="tipoImovel"> {{ $cadastroimovei->tipoImovel }} </td></tr>
 
-                                    <tr><th> Locação/Venda </th><td id="locacaoVenda"> {{ $cadastroimovei->locacaoVenda }} </td></tr>
+                                    <tr><th> Locação / Venda </th><td id="locacaoVenda"> {{ $cadastroimovei->locacaoVenda }} </td></tr>
                                     
                                     <tr><th> Nome do Edifício </th><td> {{ $cadastroimovei->nomeEdificio }} </td></tr>
                                     
@@ -111,7 +111,7 @@
 
                                     <tr><th> Outras Informações </th><td> {{ $cadastroimovei->outrasInformacoes }} </td></tr>
 
-                                    <tr><th> Data da Captação </th><td> {{ $cadastroimovei->dataCaptacao }} </td></tr>
+                                    <tr><th> Data da Captação </th><td id='dataCaptacao' > {{ $cadastroimovei->dataCaptacao }} </td></tr>
 
 
 
@@ -180,6 +180,15 @@
             document.getElementById("locacaoVenda").innerHTML = "Locação";
         }else if(document.getElementById("locacaoVenda").innerHTML == 1){
             document.getElementById("locacaoVenda").innerHTML = "Venda";
+        }else if(document.getElementById("locacaoVenda").innerHTML == 2){
+            document.getElementById("locacaoVenda").innerHTML = "Locação / Venda";
         }
+
+        var dataCaptacao = document.getElementById('dataCaptacao').innerHTML;
+        var regex = /((\d+){4})[-]((\d+){2})[-]((\d+){2})/;
+        var day = dataCaptacao.replace(regex, "$5");
+        var month = dataCaptacao.replace(regex, "$3");
+        var year = dataCaptacao.replace(regex, "$1");
+        document.getElementById('dataCaptacao').innerHTML = day+"/"+month+"/"+year;
     </script>
 @endsection
