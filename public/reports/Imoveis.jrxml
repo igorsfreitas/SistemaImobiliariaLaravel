@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Created with Jaspersoft Studio version 6.3.1.final using JasperReports Library version 6.3.1  -->
-<!-- 2017-04-06T16:12:22 -->
+<!-- 2017-04-24T19:56:06 -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Imoveis" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="992dff5c-f8ad-4866-ac68-7694af1a5e3f">
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="Imoveis.xml"/>
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
@@ -14,7 +14,7 @@
 	<property name="com.jaspersoft.studio.unit.columnWidth" value="pixel"/>
 	<property name="com.jaspersoft.studio.unit.columnSpacing" value="pixel"/>
 	<queryString>
-		<![CDATA[SELECT bairro, nomeEdificio, numeroAptCasa, endereco, foneProprietario, emailProprietario, quemIndicou FROM cadastro_imoveis ORDER BY bairro ASC]]>
+		<![CDATA[SELECT bairro, nomeEdificio, numeroAptCasa, endereco, foneProprietario, emailProprietario, quemIndicou FROM cadastro_imoveis WHERE disponivel = 0 ORDER BY bairro ASC]]>
 	</queryString>
 	<field name="bairro" class="java.lang.String"/>
 	<field name="nomeEdificio" class="java.lang.String"/>
@@ -33,11 +33,11 @@
 				<imageExpression><![CDATA["http://www.rogeriocorretor.com/img/rogerio-matos.png"]]></imageExpression>
 			</image>
 			<textField>
-				<reportElement x="113" y="90" width="329" height="30" uuid="6c07b4b2-0685-4f4c-b1ff-4a71f79b69f2"/>
+				<reportElement x="67" y="90" width="427" height="30" uuid="6c07b4b2-0685-4f4c-b1ff-4a71f79b69f2"/>
 				<textElement textAlignment="Center">
 					<font size="16"/>
 				</textElement>
-				<textFieldExpression><![CDATA["Relatório de Imóveis Cadastrados"]]></textFieldExpression>
+				<textFieldExpression><![CDATA["Relatório de Imóveis Cadastrados Disponíveis"]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="454" y="50" width="100" height="30" uuid="b18ac08b-2ac1-4c4a-85cc-cad58d274738"/>
