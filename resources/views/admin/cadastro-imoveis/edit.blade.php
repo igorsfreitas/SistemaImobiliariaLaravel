@@ -1,5 +1,9 @@
 @extends('layouts.app')
-
+@if (Auth::guest())
+    <script>
+        window.location = "/login";
+    </script>
+@endif
 @section('content')
     <div class="container">
         <div class="row">
