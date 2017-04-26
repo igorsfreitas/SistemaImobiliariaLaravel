@@ -67,7 +67,7 @@
 
                                     <tr><th> Cidade </th><td> {{ $cadastroimovei->cidade }} </td></tr>
 
-                                    <tr><th> CEP </th><td> {{ $cadastroimovei->endereco }} </td></tr>
+                                    <tr><th> CEP </th><td> {{ $cadastroimovei->cep }} </td></tr>
 
                                     <tr><th> Quantidade de Quartos </th><td> {{ $cadastroimovei->qtdQuartos }} </td></tr>
 

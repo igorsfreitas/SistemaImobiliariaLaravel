@@ -7,3 +7,11 @@
 Homestead.json
 Homestead.yaml
 .env
+
+resources/views/admin/cadastro-imoveis/relatorio.blade.php
+
+app/Http/Controllers/Admin/CadastroImoveisController.php
+
+relatorio.php
+
+app/Http/Controllers/Admin/CadastroImoveisController.php
